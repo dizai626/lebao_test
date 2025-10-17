@@ -4,7 +4,6 @@ from http.cookiejar import domain_match
 import pandas as pd
 
 def parse_nginx_log(line):
-    """不使用正则，通过字符串分割解析Nginx日志"""
     line = line.strip()
     if not line:
         return None
@@ -67,7 +66,6 @@ def parse_nginx_log(line):
         return None
 
 
-# 示例：读取并解析日志
 if __name__ == '__main__':
     log_lines = []
     #解析日志文件
