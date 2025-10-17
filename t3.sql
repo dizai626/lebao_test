@@ -10,9 +10,7 @@ CREATE TABLE Players (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     address VARCHAR(255),
-    details TEXT,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
+    details TEXT
 );
 
 CREATE TABLE Tournaments (
@@ -20,9 +18,7 @@ CREATE TABLE Tournaments (
     name VARCHAR(100) NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
-    details TEXT,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
+    details TEXT
 );
 
 CREATE TABLE Sponsors (
@@ -40,9 +36,7 @@ CREATE TABLE Members (
     player_id INT NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
-    details TEXT,
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP,
+    details TEXT
     FOREIGN KEY (club_id) REFERENCES Clubs(id),
     FOREIGN KEY (player_id) REFERENCES Players(id)
 );
